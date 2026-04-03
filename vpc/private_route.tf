@@ -7,7 +7,7 @@ resource "aws_route_table" "pegasus_private_route_table" {
   route {
     
     cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.internet_gateway.id
+    nat_gateway_id = aws_nat_gateway.nat_gateway.id
   }
   tags = {
     Name = "Public route - pegasus us east 1"
