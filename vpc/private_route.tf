@@ -1,0 +1,15 @@
+
+
+
+resource "aws_route_table" "pegasus_private_route_table" {
+  vpc_id = aws_vpc.pegasus-us-east-1.id
+  depends_on = [aws_nat_gateway.nat_gateway]
+  route {
+    
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.internet_gateway.id
+  }
+  tags = {
+    Name = "Public route - pegasus us east 1"
+  }
+}
