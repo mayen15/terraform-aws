@@ -22,3 +22,11 @@ variable "cidr_private_subnet" {
   description = "Private subnet cidr"
   default = "10.0.10.0/24"
 }
+
+variable "us_availability_zone" {
+
+  type = string
+  description = "aws availability zone"
+  default = "us-east-1b"
+
+}
