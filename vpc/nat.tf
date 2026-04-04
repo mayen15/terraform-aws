@@ -9,6 +9,6 @@ resource "aws_nat_gateway" "nat_gateway" {
   allocation_id = aws_eip.nat_eip.id
   subnet_id = aws_subnet.aws_pegasus_private_subnet.id
   tags = {
-    Name = "Private NAT GW for Pegasus us east 1"
+    Name = "Private NAT: vpc-pegasus-us-east 1"
  }
 }
